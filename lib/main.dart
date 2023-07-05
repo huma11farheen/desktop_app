@@ -7,14 +7,6 @@ import 'dart:ui' as ui;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
-  final window = WidgetsBinding.instance!.window;
-  final constraints = ui.WindowConstraints(
-    minWidth: size.width,
-    maxWidth: size.width,
-    minHeight: size.height,
-    maxHeight: size.height,
-  );
-  window.setWindowConstraints(constraints);
   windowManager.setSize(Size(
     WindowSizeEnum.desktop.width,
     WindowSizeEnum.desktop.height,
